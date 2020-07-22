@@ -1,13 +1,13 @@
 package application;
 
-import boardgame.Board;
+import chess.ChessMatch;
 
 public class Program {
 
 	public static void main(String[] args) {
 
-	Board board = new Board(8, 8);			// instanciando um tabuleiro chamado de board recebendo new Board informando 8 linhas e 8 colunas 
-		
+	ChessMatch chessMatch = new ChessMatch();			// instanciando uma partida de xadrez e imprimir o tabuleiro  
+	UI.printBoard(chessMatch.getPieces());				// função para imprimir as peças da partida através da classe 'UI' pelo método 'printBoard'	
 	}
 
 }
