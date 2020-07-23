@@ -5,11 +5,11 @@ public class Position {
 	private int row;						// encapsulamento das variáveis
 	private int column;						// encapsulamento das variáveis
 	
-	public Position(int row, int column) {	// construtores recebendo os argumentos
+	public Position(int row, int column) {	// 1o. construtores recebendo os argumentos
 		this.row = row;
 		this.column = column;
 	}
-	public int getRow() {
+	public int getRow() {					// 2o. criando getters and setters
 		return row;
 	}
 	public void setRow(int row) {
@@ -22,8 +22,8 @@ public class Position {
 		this.column = column;
 	}
 	
-	@Override								// sobrescrevendo
-	public String toString() {				// fazendo o 'toString' para imprimir a posição na tela. Estamos sobrescrevendo este método que é da classe 'object' 
+	@Override								// 3o. 'sobrescrevendo' o método 'toString' que é da classe 'object',já que todas as classes pertencem a classe 'object'	
+	public String toString() {				// 4o. fazendo o 'toString' para imprimir a posição na tela.  
 		return row + ", " + column;
 	}
 }
