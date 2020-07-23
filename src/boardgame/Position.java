@@ -23,7 +23,7 @@ public class Position {
 	}
 	
 	@Override								// sobrescrevendo
-	public String toString() {				// fazendo o 'toString' estamos sobrescrevendo este método que é da classe 'object' 
+	public String toString() {				// fazendo o 'toString' para imprimir a posição na tela. Estamos sobrescrevendo este método que é da classe 'object' 
 		return row + ", " + column;
 	}
 }
