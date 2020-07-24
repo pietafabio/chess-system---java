@@ -4,12 +4,12 @@ public class Board {
 
 	private int rows; 							// quantidade de linhas
 	private int columns; 						// quantidade de colunas
-	private Piece[][] pieces; 					// uma matriz de peças de nome 'pieces'
+	private Piece[][] pieces; 					// declaração de uma matriz '[][]' 'piece' de nome 'pieces'
 			
 	public Board(int rows, int columns) {
 		this.rows = rows;
 		this.columns = columns;
-		pieces = new Piece[rows][columns]; 		// a matriz 'pieces' vai ser instanciada com 'Piece' na quantidade de linhas
+		pieces = new Piece[rows][columns]; 		// instanciação da matriz 'pieces' com 'Piece' na quantidade de linhas
 												// e colunas informadas
 	}
 
@@ -39,4 +39,17 @@ public class Board {
 	public Piece piece(Position position) {			// Sobrecarga: retornando a peça pela posição
 		return pieces[position.getRow()][position.getColumn()];		// retorna a peça na posição da linha e coluna informada
 			}
+	
+	public void placePiece(Piece piece, Position position) {	// método: 'placePiece' recebendo uma 'piece' e uma 'position'
+		pieces [position.getRow()][position.getColumn()] = piece;	// na matriz 'pieces' na linha 'position.getRow' e na linha 'position.getColumn',
+																	// atribuir a esta posição da matriz ´pieces' a peça que veio como argumento (linha de cima)
+																	// e já declarada no 'Board', linha 7 e instanciada no costrutor, linha 12.
+		
+		piece.position = position;	// declarando que esta ´piece' não está mais na posição 'null'
+		
+		
+		
+		
+		
+	}
 }
