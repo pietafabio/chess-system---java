@@ -1,17 +1,18 @@
 package boardgame;
 
 public class Piece {
+										
+	protected Position position;		// 'protected' porque somente classes do mesmo pacote e subclasses de outro pacote poderão acessar o objeto 'Position' de atributo 'position' da classe 'Piece'.  
+	private Board board;				// 'private' porque o objeto 'Board' de atributo 'board' somente pode ser acessado por esta classe 'Piece'. 
 	
-	protected Position position;		//'protected' para que esta posição não seja visível na camada 'Chess layer' (posição simples de matriz). 'position' = nome do atributo.
-	private Board board;				// associando a peça com o tabuleiro
-	public Piece(Board board) {			// somente associar a peça ao tabuleiro já que a posição inicial é 'null', não foi colocada no tabuleiro ainda.
+	public Piece(Board board) {			// somente associar o objeto 'Piece' ao objeto 'Board' de atributo 'board', já que a posição inicial é 'null', pois não foi colocada no tabuleiro ainda.
 			this.board = board;
 			position = null;
 		
 	}
-
-	protected Board getBoard() {		// 'protected' porque somente classes do mesmo pacote e subclasses poderão acessar o tabuleiro de uma peça.
-		return board;
+		
+	protected Board getBoard() {		// 'protected' porque somente classes do mesmo pacote e subclasses de outro pacote poderão acessar o objeto 'Board' de atributo 'board' da classe 'Piece'.
+		return board;					
 	}
 	
 

@@ -2,12 +2,12 @@ package chess;
 
 import boardgame.Board;
 
-public class ChessMatch { // nesta classe estarão as regras do jogo de xadrez
+public class ChessMatch { 				// nesta classe estarão as regras do jogo de xadrez
 
-	private Board board;
+	private Board board;				// 'private' porque o objeto 'Board' de atributo 'board' somente pode ser acessado por esta classe 'ChessMatch'. 
 
 	public ChessMatch() {
-		board = new Board(8, 8); // aqui se declara o tamanho do tabuleiro
+		board = new Board(8, 8); 		// aqui se declara o tamanho do tabuleiro
 	}
 
 	public ChessPiece[][] getPieces() {

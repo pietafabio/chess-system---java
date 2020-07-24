@@ -2,8 +2,8 @@ package boardgame;
 
 public class Position {
 
-	private int row;						// encapsulamento das variáveis
-	private int column;						// encapsulamento das variáveis
+	private int row;						// encapsulamento das variáveis pelo método private
+	private int column;						
 	
 	public Position(int row, int column) {	// 1o. construtores recebendo os argumentos
 		this.row = row;
@@ -22,8 +22,8 @@ public class Position {
 		this.column = column;
 	}
 	
-	@Override								// 3o. 'sobrescrevendo' o método 'toString' que é da classe 'object',já que todas as classes pertencem a classe 'object'	
-	public String toString() {				// 4o. fazendo o 'toString' para imprimir a posição na tela.  
+	@Override								// 3o. 'sobrescrevendo' o método 'toString' que é da classe 'object', já que todas as classes pertencem a classe 'object'	
+	public String toString() {				// 4o. fazendo o 'toString' para imprimir a posição na tela  
 		return row + ", " + column;
 	}
 }
