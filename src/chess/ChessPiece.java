@@ -3,7 +3,7 @@ package chess;
 import boardgame.Board;
 import boardgame.Piece;
 
-public class ChessPiece extends Piece { // porquê 'ChessPiesse' é uma subclasse de 'Piece'
+public abstract class ChessPiece extends Piece { // porquê 'ChessPiesse' é uma subclasse de 'Piece'
 
 	private Color color; // atributo da classe
 
