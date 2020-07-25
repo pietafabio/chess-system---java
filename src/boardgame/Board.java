@@ -12,7 +12,7 @@ public class Board {
 		}
 		this.rows = rows;
 		this.columns = columns;
-		pieces = new Piece[rows][columns]; // instanciação da matriz 'pieces' com 'Piece' na quantidade de linhas e colunas informadas
+		pieces = new Piece[rows][columns]; 		// instanciação da matriz 'pieces' com 'Piece' na quantidade de linhas e colunas informadas
 	}
 
 	public int getRows() {
@@ -49,14 +49,14 @@ public class Board {
 		return row >= 0 && row < rows && column >= 0 && column < columns; // quando uma posição existe?  'row' menor ou igual a 0' e 'row' menor do que a altura do 'board' ('rows') column maior ou igual a '0' e menor do que a quantidade de 'columns'
 	}
 
-	public boolean positionExists(Position position) { // implementando a função 'positionExists'
+	public boolean positionExists(Position position) { 					// implementando a função 'positionExists'
 		return positionExists(position.getRow(), position.getColumn()); // reaproveitando o método de cima
 	}
-	public boolean thereIsAPiece(Position position) { // implementando o método 'thereIsAPiece' recebendo uma 'position'
+	public boolean thereIsAPiece(Position position) { 					// implementando o método 'thereIsAPiece' recebendo uma 'position'
 		if (!positionExists(position)) { 
 			throw new BoardException("Position not on the board");
 		}
-	return piece(position) != null; // se a 'piece(position)' for diferente de 'null', existe uma 'piece' na posição
-										// solicitada
+	return piece(position) != null; 									// se a 'piece(position)' for diferente de 'null', existe uma 'piece' na posição solicitada
+										
 	}
 }
