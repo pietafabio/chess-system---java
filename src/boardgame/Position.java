@@ -22,6 +22,11 @@ public class Position {
 		this.column = column;
 	}
 	
+	public void setValues(int row, int column) {
+		this.row = row;
+		this.column = column;
+	}
+	
 	@Override								// 3o. 'sobrescrevendo' o método 'toString' que é da classe 'object', já que todas as classes pertencem a classe 'object'	
 	public String toString() {				// 4o. fazendo o 'toString' para imprimir a posição na tela  
 		return row + ", " + column;
